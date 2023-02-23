@@ -1,12 +1,68 @@
-# Getting Started with Create React App
+Cryptocurrency Realtime Price
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cryptocurrency realtime Price tracking.
 
-## Available Scripts
+Dependencies
+
++ **axios** : axios 0.21.1
++ **tailwindcss**: tailwindcss 2.1.4
++ **typescript**: typescript 4.3.4
++ **express**: express 4.17.1
++ **memory-cache**: memory-cache 0.2.0
++ **postcss**: postcss 8.3.5
++ **postcss-cli**: postcss-cli 8.3.1
++ **react**: react 17.0.2
++ **react-dom**: react-dom 17.0.2
++ **react-query**: react-query 3.17.2
++ **react-scripts**: react-scripts 4.0.3
+
+API:
+NodeJS, Express
+
+Requirements
+- Clarify requirements in case you have any questions/difficulties
+
+  Faced difficulties with  https://www.cryptonator.com/api/ call as it is protected by cloudflare , instead i have used wazirx api https://docs.wazirx.com/#24hr-ticker-price-change-statistics
+- Demonstrate your development flow with commits and pull requests
+
+  Used Conventional commits
+- Test cases coverage
+  
+- Provide an architecture design
+
+  Added screnshot
+- Node.js, React and TypeScript are MUST
+
+  Used as required
+- Consideration of responsive design
+
+  Tailwind css used and it is responsive
+- Consideration of scalability
+
+  memory-cache used to cache api response 
+- Consideration of minimizing charging fee for API calls
+
+  Used memory-cache 
+- (Optional) Dockerizing the whole application
+
+
+
+### wazirx.com API
+ HTTP GET API used:
+- https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=[pair] 
+
+##### [pair]
+Pair consists of a base and a target, in the form of *[base][target]*. example:
+- [https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=btcusdt](https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=btcusdt)
+
+
+
+# How to build & run 
+
 
 In the project directory, you can run:
-
-### `npm start`
+### `npm install`
+### `npm run`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -31,16 +87,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Note: this is a one-way operation. Once you `eject`, you can’t go back!*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
