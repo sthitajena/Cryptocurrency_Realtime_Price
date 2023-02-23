@@ -4,65 +4,77 @@ Cryptocurrency realtime Price tracking.
 
 Dependencies
 
-+ **axios** : axios 0.21.1
-+ **tailwindcss**: tailwindcss 2.1.4
-+ **typescript**: typescript 4.3.4
-+ **express**: express 4.17.1
-+ **memory-cache**: memory-cache 0.2.0
-+ **postcss**: postcss 8.3.5
-+ **postcss-cli**: postcss-cli 8.3.1
-+ **react**: react 17.0.2
-+ **react-dom**: react-dom 17.0.2
-+ **react-query**: react-query 3.17.2
-+ **react-scripts**: react-scripts 4.0.3
+- **axios** : axios 0.21.1
+- **tailwindcss**: tailwindcss 2.1.4
+- **typescript**: typescript 4.3.4
+- **express**: express 4.17.1
+- **memory-cache**: memory-cache 0.2.0
+- **postcss**: postcss 8.3.5
+- **postcss-cli**: postcss-cli 8.3.1
+- **react**: react 17.0.2
+- **react-dom**: react-dom 17.0.2
+- **react-query**: react-query 3.17.2
+- **react-scripts**: react-scripts 4.0.3
 
 API:
 NodeJS, Express
 
 Requirements
+
 - Clarify requirements in case you have any questions/difficulties
 
-  Faced difficulties with  https://www.cryptonator.com/api/ call as it is protected by cloudflare , instead i have used wazirx api https://docs.wazirx.com/#24hr-ticker-price-change-statistics
+  Faced difficulties with https://www.cryptonator.com/api/ call as it is protected by cloudflare , instead i have used wazirx api https://docs.wazirx.com/#24hr-ticker-price-change-statistics
+
 - Demonstrate your development flow with commits and pull requests
 
   Used Conventional commits
+
 - Test cases coverage
-  
 - Provide an architecture design
 
   Added screnshot
+
 - Node.js, React and TypeScript are MUST
 
   Used as required
+
 - Consideration of responsive design
 
   Tailwind css used and it is responsive
+
 - Consideration of scalability
 
-  memory-cache used to cache api response 
+  memory-cache used to cache api response
+
 - Consideration of minimizing charging fee for API calls
 
-  Used memory-cache 
+  Used memory-cache
+
 - (Optional) Dockerizing the whole application
 
-
-
 ### wazirx.com API
- HTTP GET API used:
-- https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=[pair] 
+
+HTTP GET API used:
+
+- https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=[pair]
 
 ##### [pair]
-Pair consists of a base and a target, in the form of *[base][target]*. example:
+
+Pair consists of a base and a target, in the form of _[base][target]_. example:
+
 - [https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=btcusdt](https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=btcusdt)
 
-
-
-# How to build & run 
-
+# How to build & run
 
 In the project directory, you can run:
+
 ### `npm install`
-### `npm run`
+
+### `npm start` or `yarn start`
+
+# Output
+
+![alt text](https://github.com/sthitajena/Cryptocurrency_Realtime_Price/blob/main/screenshot/app.png)
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -87,5 +99,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-*Note: this is a one-way operation. Once you `eject`, you can’t go back!*
-
+_Note: this is a one-way operation. Once you `eject`, you can’t go back!_
