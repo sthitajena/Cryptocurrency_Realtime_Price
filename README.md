@@ -100,3 +100,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 _Note: this is a one-way operation. Once you `eject`, you can’t go back!_
+
+### `Architecture`
+
+![alt text](https://github.com/sthitajena/Cryptocurrency_Realtime_Price/blob/main/screenshot/arch.png)
