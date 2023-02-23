@@ -1,0 +1,36 @@
+{
+    "rows": [
+        {
+            "code": "xrp",
+            "name": "Ripple"
+        },
+        {
+            "code": "eth",
+            "name": "Ether"
+        },
+        {
+            "code": "btc",
+            "name": "Bitcoin"
+        },
+        {
+            "code": "ltc",
+            "name": "Litecoin"
+        },
+        {
+            "code": "xlm",
+            "name": "Monero"
+        },
+        {
+            "code": "doge",
+            "name": "Dogecoin"
+        },
+        {
+            "code": "dash",
+            "name": "Dash"
+        },
+        {
+            "code": "lsk",
+            "name": "Lisk"
+        }
+           ]
+}
