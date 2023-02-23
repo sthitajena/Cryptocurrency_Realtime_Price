@@ -30,7 +30,7 @@ const ListData = ({ coins, loading, reset, updating }: Props) => {
       <div className="flex flex-row flex-wrap w-full">
         {loading ? [0, 1, 2].map((index) => <Loading key={index} />) : null}
 
-        {coins && coins.length >= 7
+        {coins && coins.length >= 8
           ? coins.map((coin) => <Crypto key={coin.symbol} coin={coin} />)
           : null}
       </div>
