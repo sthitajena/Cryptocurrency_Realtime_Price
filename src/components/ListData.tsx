@@ -1,42 +1,36 @@
-//import { CoinModel } from "../../../types";
-//import Button from "./Button";
-//import Coin from "./Coin";
-//import CoinSkeleton from "./CoinSkeleton";
-
+import pageheadstyles from "../css/PageHead.module.css";
 import { Ticker } from "../model";
 import Crypto from "./Crypto";
+import LiveData from "./LiveData";
 import Loading from "./Loading";
 
 type Props = {
   coins?: Ticker[];
   reset: () => void;
   loading: boolean;
+  updating: boolean;
 };
 
-const ListData = ({ coins, loading, reset }: Props) => {
+const ListData = ({ coins, loading, reset, updating }: Props) => {
   if (!coins && !loading) {
     return null;
   }
 
+  const shouldRender = !loading;
+
   return (
     <>
-      <div className="flex flex-col justify-between md:flex-row py-2">
-        <div className="flex flex-col">
-          <h2 className="font-bold text-lg">Listed coins</h2>
-          <span className="text-sm text-gray-700">
-             Prices are updated in real time every 30 seconds
-          </span>
+      <div className={pageheadstyles.pagehead}>
+        <div className={pageheadstyles.pagehead__content}>
+          <h1>List of coins</h1>
+          {shouldRender && <LiveData updating={updating} />}
         </div>
-
-        
       </div>
 
       <div className="flex flex-row flex-wrap w-full">
-      {loading
-          ? [0, 1, 2].map((index) => <Loading key={index} />)
-          : null}
+        {loading ? [0, 1, 2].map((index) => <Loading key={index} />) : null}
 
-        {coins && coins.length >= 5
+        {coins && coins.length >= 7
           ? coins.map((coin) => <Crypto key={coin.symbol} coin={coin} />)
           : null}
       </div>

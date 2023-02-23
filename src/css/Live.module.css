@@ -1,0 +1,48 @@
+.live {
+    --live: rgb(5, 222, 8);
+    text-align: center;
+    color: green;
+    font-style: italic;
+}
+
+.live_top {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.live_top_pulse {
+    background: var(--live);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+
+    box-shadow: 0 0 0 0 rgb(5, 222, 84);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(5, 222, 8);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 4px rgba(34, 212, 98, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 212, 98, 0);
+    }
+}
+
+.live_top_span {
+    display: block;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.live_bottom {
+    font-size: 12px;
+}
